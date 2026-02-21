@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
     FaCompressArrowsAlt, FaRegFilePdf, FaObjectGroup, 
     FaCut, FaFileWord, FaShieldAlt, FaBolt 
@@ -8,6 +8,9 @@ import './Home.css';
 
 const Home = () => {
     const location = useLocation();
+    const navigate = useNavigate();
+    const [clickedToolId, setClickedToolId] = useState(null);
+    const [isNavigating, setIsNavigating] = useState(false);
 
     useEffect(() => {
         if (location.pathname === '/all-tools') {
@@ -17,6 +20,16 @@ const Home = () => {
             }
         }
     }, [location.pathname]);
+
+    const handleToolCardClick = (event, tool) => {
+        event.preventDefault();
+        if (isNavigating) return;
+        setIsNavigating(true);
+        setClickedToolId(tool.id);
+        window.setTimeout(() => {
+            navigate(tool.link);
+        }, 180);
+    };
 
     const tools = [
         {
@@ -95,7 +108,12 @@ const Home = () => {
 
                     <div className="tool-grid">
                         {tools.map((tool) => (
-                            <Link to={tool.link} key={tool.id} className="tool-card">
+                            <Link
+                                to={tool.link}
+                                key={tool.id}
+                                className={`tool-card ${clickedToolId === tool.id ? 'tool-clicked' : ''}`}
+                                onClick={(e) => handleToolCardClick(e, tool)}
+                            >
                                 <div className="tool-icon" style={{ color: tool.color }}>
                                     {tool.icon}
                                 </div>

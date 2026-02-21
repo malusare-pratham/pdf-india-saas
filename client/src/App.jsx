@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // Context Provider
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -48,10 +49,21 @@ const AdminRoute = ({ children }) => {
   return children;
 };
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <div className="app-wrapper">
           <Navbar />
           

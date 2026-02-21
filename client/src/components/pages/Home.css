@@ -94,12 +94,92 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tool-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    pointer-events: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tool-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     border-color: #2563eb;
+}
+
+.tool-card:hover::before {
+    border-color: #93c5fd;
+    box-shadow: none;
+}
+
+.tool-card:active {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+    animation: toolTapPulse 240ms ease-out;
+}
+
+.tool-card:active::before {
+    border-color: #93c5fd;
+    box-shadow: none;
+}
+
+.tool-card.tool-clicked {
+    animation: toolClickLaunch 180ms ease-out forwards;
+}
+
+.tool-card.tool-clicked::before {
+    border-color: #93c5fd;
+    animation: toolBorderFlash 180ms ease-out forwards;
+}
+
+.tool-card:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.22);
+    outline-offset: 2px;
+}
+
+@keyframes toolTapPulse {
+    0% {
+        transform: translateY(0) scale(0.99);
+        box-shadow: 0 8px 14px rgba(37, 99, 235, 0.12);
+        border-color: #bfdbfe;
+    }
+    100% {
+        transform: translateY(-10px) scale(1);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #2563eb;
+    }
+}
+
+@keyframes toolClickLaunch {
+    0% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 8px 14px rgba(37, 99, 235, 0.12);
+    }
+    100% {
+        transform: translateY(-10px) scale(1.01);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #2563eb;
+    }
+}
+
+@keyframes toolBorderFlash {
+    0% {
+        border-color: #dbeafe;
+        box-shadow: none;
+    }
+    100% {
+        border-color: #bfdbfe;
+        box-shadow: none;
+    }
 }
 
 .tool-icon {
@@ -147,4 +227,14 @@
     .hero-content h1 { font-size: 2.5rem; }
     .hero-btns { flex-direction: column; }
     .why-grid { flex-direction: column; gap: 40px; }
+    .tool-card {
+        border-color: #dbeafe;
+        box-shadow: 0 8px 16px rgba(37, 99, 235, 0.08);
+    }
+    .tool-card:active {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #2563eb;
+        animation: toolTapPulse 240ms ease-out;
+    }
 } 
