@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || window.location.origin;
 
 const API = axios.create({
-    baseURL: `${API_BASE_URL}/api/v1`,
+    baseURL: `${API_URL}/api/v1`,
 });
 
 const isPublicEndpoint = (url = '') =>
@@ -60,7 +60,7 @@ API.interceptors.response.use((response) => response, (error) => {
 export const getFileDownloadUrl = (downloadUrl) => {
     if (!downloadUrl) return null;
     if (downloadUrl.startsWith('http')) return downloadUrl;
-    return `${API_BASE_URL}${downloadUrl}`;
+    return `${API_URL}${downloadUrl}`;
 };
 
 export const downloadProcessedFile = async (downloadUrl, fileName = 'downloaded_file') => {
