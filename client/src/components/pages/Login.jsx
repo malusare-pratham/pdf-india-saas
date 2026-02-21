@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaEnvelope, FaLock, FaGoogle, FaArrowRight } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaGoogle, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 import './Login.css';
 
@@ -32,6 +32,9 @@ const Login = () => {
     return (
         <div className="auth-page">
             <div className="auth-card">
+                <button type="button" className="auth-close-btn" onClick={() => navigate('/')}>
+                    <FaTimes />
+                </button>
                 <div className="auth-header">
                     <h2>Welcome Back</h2>
                     <p>Log in to access your saved PDF documents</p>

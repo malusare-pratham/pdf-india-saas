@@ -8,8 +8,10 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { user, logout } = useAuth();
     const navigate = useNavigate();
+    const closeMenu = () => setIsOpen(false);
 
     const handleLogout = () => {
+        closeMenu();
         logout();
         navigate('/login');
     };
@@ -32,34 +34,34 @@ const Navbar = () => {
                 {/* Nav Links */}
                 <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
-                        <Link to="/all-tools" className="nav-link">All Tools</Link>
+                        <Link to="/all-tools" className="nav-link" onClick={closeMenu}>All Tools</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/govt-resize" className="nav-link">Govt Forms</Link>
+                        <Link to="/govt-resize" className="nav-link" onClick={closeMenu}>Govt Forms</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/pricing" className="nav-link">Pricing</Link>
+                        <Link to="/pricing" className="nav-link" onClick={closeMenu}>Pricing</Link>
                     </li>
                     {!user ? (
                         <>
                             <li className="nav-item">
-                                <Link to="/login" className="nav-btn-login">
+                                <Link to="/login" className="nav-btn-login" onClick={closeMenu}>
                                     <FaUserCircle /> Login
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/register" className="nav-btn-signup">Get Started</Link>
+                                <Link to="/register" className="nav-btn-signup" onClick={closeMenu}>Get Started</Link>
                             </li>
                         </>
                     ) : (
                         <>
                             {user.role === 'admin' && (
                                 <li className="nav-item">
-                                    <Link to="/admin/dashboard" className="nav-link">Admin</Link>
+                                    <Link to="/admin/dashboard" className="nav-link" onClick={closeMenu}>Admin</Link>
                                 </li>
                             )}
                             <li className="nav-item">
-                                <Link to="/dashboard" className="nav-btn-login">
+                                <Link to="/dashboard" className="nav-btn-login" onClick={closeMenu}>
                                     <FaUserCircle /> Dashboard
                                 </Link>
                             </li>

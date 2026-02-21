@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
     FaCompressArrowsAlt, FaRegFilePdf, FaObjectGroup, 
     FaCut, FaFileWord, FaShieldAlt, FaBolt 
@@ -7,6 +7,17 @@ import {
 import './Home.css';
 
 const Home = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === '/all-tools') {
+            const toolsSection = document.getElementById('tools-section');
+            if (toolsSection) {
+                toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }, [location.pathname]);
+
     const tools = [
         {
             id: 1,
@@ -75,7 +86,7 @@ const Home = () => {
             </section>
 
             {/* Features/Tools Grid */}
-            <section className="tools-section">
+            <section id="tools-section" className="tools-section">
                 <div className="container">
                     <div className="section-header">
                         <h2>Every PDF tool you need</h2>

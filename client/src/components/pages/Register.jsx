@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaEnvelope, FaLock, FaUser, FaArrowRight } from 'react-icons/fa';
+import { FaEnvelope, FaLock, FaUser, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { useAuth } from '../../context/AuthContext';
 import './Login.css';
 
@@ -28,6 +28,9 @@ const Register = () => {
     return (
         <div className="auth-page">
             <div className="auth-card">
+                <button type="button" className="auth-close-btn" onClick={() => navigate('/')}>
+                    <FaTimes />
+                </button>
                 <div className="auth-header">
                     <h2>Create Account</h2>
                     <p>Register to use all PDF tools and save your files</p>

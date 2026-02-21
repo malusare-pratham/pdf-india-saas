@@ -55,6 +55,14 @@
     color: #2563eb;
 }
 
+.hero-btns .btn-primary {
+    border: 2px solid #cbd5e1;
+}
+
+.hero-btns .btn-primary:hover {
+    border-color: #2563eb;
+}
+
 /* Tools Section */
 .tools-section {
     padding: 80px 0;
