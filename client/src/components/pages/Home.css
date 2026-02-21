@@ -110,8 +110,8 @@
 }
 
 .tool-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: none;
+    box-shadow: 0 10px 16px rgba(37, 99, 235, 0.12);
     border-color: #2563eb;
 }
 
@@ -121,10 +121,10 @@
 }
 
 .tool-card:active {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: none;
+    box-shadow: 0 10px 16px rgba(37, 99, 235, 0.12);
     border-color: #2563eb;
-    animation: toolTapPulse 240ms ease-out;
+    animation: none;
 }
 
 .tool-card:active::before {
@@ -133,7 +133,7 @@
 }
 
 .tool-card.tool-clicked {
-    animation: toolClickLaunch 180ms ease-out forwards;
+    animation: none;
 }
 
 .tool-card.tool-clicked::before {
@@ -144,31 +144,6 @@
 .tool-card:focus-visible {
     outline: 3px solid rgba(37, 99, 235, 0.22);
     outline-offset: 2px;
-}
-
-@keyframes toolTapPulse {
-    0% {
-        transform: translateY(0) scale(0.99);
-        box-shadow: 0 8px 14px rgba(37, 99, 235, 0.12);
-        border-color: #bfdbfe;
-    }
-    100% {
-        transform: translateY(-10px) scale(1);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        border-color: #2563eb;
-    }
-}
-
-@keyframes toolClickLaunch {
-    0% {
-        transform: translateY(0) scale(1);
-        box-shadow: 0 8px 14px rgba(37, 99, 235, 0.12);
-    }
-    100% {
-        transform: translateY(-10px) scale(1.01);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        border-color: #2563eb;
-    }
 }
 
 @keyframes toolBorderFlash {
@@ -232,9 +207,9 @@
         box-shadow: 0 8px 16px rgba(37, 99, 235, 0.08);
     }
     .tool-card:active {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: none;
+        box-shadow: 0 10px 16px rgba(37, 99, 235, 0.12);
         border-color: #2563eb;
-        animation: toolTapPulse 240ms ease-out;
+        animation: none;
     }
 } 
