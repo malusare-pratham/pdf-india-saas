@@ -1,0 +1,122 @@
+.plan-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.popular {
+    border-color: #2563eb;
+    transform: scale(1.05);
+}
+
+.plan-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-header h3 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.crown-icon {
+    color: #f59e0b;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-bottom: 30px;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.currency, .duration {
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.features-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.features-list li.excluded {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.icon-check { color: #10b981; }
+.icon-times { color: #ef4444; }
+
+.plan-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #2563eb;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-popular {
+    background: #2563eb;
+    color: white;
+}
+
+.plan-btn:hover {
+    background: #1e40af;
+    color: white;
+    border-color: #1e40af;
+}
+
+.plan-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}

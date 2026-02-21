@@ -1,0 +1,50 @@
+.tool-page {
+    padding: 60px 0;
+    min-height: 80vh;
+    background: #f8fafc;
+}
+
+.tool-icon-circle.word-theme {
+    width: 80px;
+    height: 80px;
+    background: #eef2ff;
+    color: #2b579a; /* Microsoft Word Blue */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 20px;
+    border: 2px solid #dbeafe;
+}
+
+.conversion-success-icon {
+    font-size: 3rem;
+    color: #2b579a;
+    margin-bottom: 20px;
+    animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.word-btn {
+    background-color: #2b579a !important;
+    border: none;
+}
+
+.word-btn:hover {
+    background-color: #1e3a8a !important;
+}
+
+.success-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}

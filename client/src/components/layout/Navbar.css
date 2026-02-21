@@ -1,0 +1,148 @@
+.navbar {
+    background: #ffffff;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flag-stripe {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(to right, #FF9933 33.3%, #ffffff 33.3%, #ffffff 66.6%, #128807 66.6%);
+    position: absolute;
+    top: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+.logo-icon {
+    color: #ef4444; /* PDF Red */
+    margin-right: 10px;
+}
+
+.logo-accent {
+    color: #2563eb; /* Indian Blue */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #475569;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+/* Buttons */
+.nav-btn-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.nav-btn-login:hover {
+    background: #eff6ff;
+}
+
+.nav-btn-signup {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    margin-left: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn-signup:hover {
+    background: #1e40af;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 960px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: white;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        opacity: 1;
+    }
+
+    .nav-item {
+        height: 70px;
+    }
+
+    .nav-btn-login, .nav-btn-signup {
+        margin: 10px 0;
+    }
+}

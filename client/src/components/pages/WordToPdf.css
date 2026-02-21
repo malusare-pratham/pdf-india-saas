@@ -1,0 +1,49 @@
+.tool-page {
+    padding: 60px 0;
+    min-height: 80vh;
+    background: #f8fafc;
+}
+
+.word-to-pdf-theme {
+    width: 120px !important;
+    height: 80px !important;
+    background: white !important;
+    border-radius: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.icon-word { color: #2b579a; font-size: 1.8rem; }
+.icon-pdf { color: #ef4444; font-size: 1.8rem; }
+.icon-arrow { color: #94a3b8; font-size: 1rem; }
+
+.final-pdf-icon {
+    font-size: 4rem;
+    color: #ef4444;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 5px 10px rgba(239, 68, 68, 0.2));
+}
+
+.pdf-btn {
+    background-color: #ef4444 !important; /* PDF Red */
+}
+
+.pdf-btn:hover {
+    background-color: #dc2626 !important;
+    transform: translateY(-2px);
+}
+
+.success-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}

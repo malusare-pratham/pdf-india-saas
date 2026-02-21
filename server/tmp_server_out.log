@@ -1,0 +1,12 @@
+[dotenv@17.3.1] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+File Cleaner Service Initialized.
+[1m[36m
+    🚀 PDF India Smart Tools - Server Active
+    ---------------------------------------
+    📍 Status: Running in development
+    🔌 Port:   5000
+    📅 Time:   2/21/2026, 2:08:34 AM
+    ---------------------------------------
+    [39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32minfo[39m: MongoDB Connected: localhost {"service":"pdf-india-service","timestamp":"2026-02-21 02:08:34"}

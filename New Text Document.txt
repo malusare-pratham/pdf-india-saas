@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment files
+.env
+.env.*
+
+# Uploads
+uploads/
+server/uploads/
+client/public/uploads/
+
+# Logs
+logs/
+*.log
+
+# Build files
+client/build/
+dist/
+.next/
+
+# OS files
+.DS_Store
+thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/

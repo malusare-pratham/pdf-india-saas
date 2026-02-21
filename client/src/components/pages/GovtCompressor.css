@@ -1,0 +1,69 @@
+.tool-page {
+    padding: 60px 0;
+    min-height: 80vh;
+    background: #f8fafc;
+}
+
+.govt-theme {
+    background: #fff7ed !important;
+    color: #ea580c !important; /* Saffron/Orange theme */
+    border: 2px solid #fdba74;
+}
+
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.preset-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.preset-card:hover {
+    border-color: #ea580c;
+}
+
+.preset-card.active {
+    border-color: #ea580c;
+    background: #fff7ed;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
+}
+
+.preset-icon {
+    font-size: 1.5rem;
+    color: #ea580c;
+    margin-bottom: 10px;
+}
+
+.preset-card h4 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.preset-card span {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.govt-btn {
+    background-color: #ea580c !important;
+}
+
+.govt-btn:hover {
+    background-color: #c2410c !important;
+}
+
+.govt-success {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}

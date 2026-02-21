@@ -1,0 +1,89 @@
+.tool-page {
+    padding: 60px 0;
+    min-height: 80vh;
+    background: #f8fafc;
+}
+
+.tool-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tool-icon-circle {
+    width: 80px;
+    height: 80px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 20px;
+}
+
+.tool-header h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.tool-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* Success Result State */
+.result-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.success-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.success-card h2 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.success-card p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}

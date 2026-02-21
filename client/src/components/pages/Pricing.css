@@ -1,0 +1,94 @@
+.pricing-page {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    min-height: 90vh;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricing-header h1 {
+    font-size: 3rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.blue-text {
+    color: #2563eb;
+}
+
+.pricing-header p {
+    font-size: 1.2rem;
+    color: #64748b;
+}
+
+.pricing-status {
+    text-align: center;
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+.pricing-error {
+    text-align: center;
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* FAQ Section Styling */
+.pricing-faq {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-faq h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1e293b;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.faq-item h4 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-header h1 {
+        font-size: 2.2rem;
+    }
+}

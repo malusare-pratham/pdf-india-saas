@@ -1,0 +1,125 @@
+.footer {
+    background: #1e293b; /* Dark Slate */
+    color: #f8fafc;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #94a3b8;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+    transform: translateY(-3px);
+}
+
+.footer-links h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+
+.footer-links h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background: #2563eb;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links ul li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.support-email {
+    color: #38bdf8;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.made-in-india {
+    margin-top: 20px;
+    display: inline-block;
+    background: #334155;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.heart-icon {
+    color: #ef4444;
+    margin: 0 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 960px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
